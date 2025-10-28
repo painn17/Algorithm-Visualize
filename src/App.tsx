@@ -10,6 +10,7 @@ function App() {
           <CustomButton callback={() => setAlgorithm("quickSort")}>Quick Sort</CustomButton>
           <CustomButton callback={() => setAlgorithm("binarySearch")}>Binary Search</CustomButton>
           <CustomButton callback={() => setAlgorithm("factorialHash")}>Factorial Hash</CustomButton>
+          <CustomButton callback={() => setAlgorithm("bubbleSort")}>Bubble Sort</CustomButton>
         </header>
         <div className="mx-auto">
           <AlgorithmBlock algorithm={algorithm}>{algorithm}</AlgorithmBlock>

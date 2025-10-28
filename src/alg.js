@@ -45,7 +45,7 @@ export function useAlgorithm() {
           addStep({
             algorithm: "bubbleSort",
             depth: 0,
-            data: [...array],
+            data: { array: [...array], i, j, swapped: `${array[j]} <= ${array[j + 1]}` },
           });
         }
       }
@@ -63,7 +63,17 @@ export function useAlgorithm() {
         addStep({
           algorithm: "binarySearch",
           depth,
-          data: { left, mid, right, current: sorted[mid], target },
+          data: {
+            visibleSortedArray: sorted.slice(left, right + 1),
+            left,
+            leftNumber: sorted[left],
+            mid,
+            midNumber: sorted[mid],
+            right,
+            rightNumber: sorted[right],
+            current: sorted[mid],
+            target,
+          },
         });
 
         if (sorted[mid] === target) return arr.indexOf(sorted[mid]);
