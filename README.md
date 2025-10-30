@@ -1,75 +1,83 @@
-# React + TypeScript + Vite
+# Algorithm Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that visualizes common algorithms with step-by-step execution details. This interactive tool helps users understand how different algorithms work by showing their internal state at each step.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Supported Algorithms (more will be added)
 
-## React Compiler
+- **Quick Sort**: Visualizes the divide-and-conquer sorting algorithm with pivot selection
+- **Bubble Sort**: Demonstrates the comparison-based sorting with step-by-step swaps
+- **Binary Search**: Shows the search process in sorted arrays with left/right pointer movement
+- **Factorial Hash**: Illustrates recursive factorial calculation with memoization
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Interactive Controls
 
-## Expanding the ESLint configuration
+- **Dynamic Array Management**: Add numbers manually or generate random arrays
+- **Real-time Visualization**: Watch algorithm execution step by step
+- **Detailed Step Information**: See algorithm state, depth, and variables at each step
+- **Clear Results**: Reset arrays and visualization with one click
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technology Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React with Hooks (useState)
+- **Styling**: Tailwind CSS
+- **Algorithms**: Custom implementations with step tracking
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd algorithm-visualizer
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
-# Algorithm-Visualize
-# Algorithm-Visualize
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+## Usage
+
+1. **Select Algorithm**: Choose from Quick Sort, Bubble Sort, Binary Search, or Factorial Hash using the header buttons
+
+2. **Input Data**:
+
+   - For sorting/searching: Add numbers manually or generate random arrays
+   - For binary search: Specify target value
+   - For factorial: Enter a single number
+
+3. **Run Algorithm**: Click "Run" to execute and visualize the algorithm
+
+4. **Analyze Steps**:
+   - View detailed step information in the visualization panel
+   - See algorithm state, variables, and recursion depth
+   - Watch the final result display
+
+## UI Components
+
+- **CustomButton**: Reusable button component with color customization
+- **AlgorithmBlock**: Main visualization container with algorithm-specific inputs
+- **useAlgorithm Hook**: Centralized algorithm management and step tracking
+
+## Responsive Design
+
+- Mobile-friendly interface using Tailwind CSS
+- Flexible layout that adapts to different screen sizes
+- Scrollable step visualization for large datasets
+
+## State Management
+
+- React hooks for local state management
+- Centralized algorithm runner with reset functionality
+- Real-time updates for steps and results
+
+Perfect for educational purposes, algorithm analysis, and understanding computational thinking through visualization.
