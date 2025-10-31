@@ -1,1 +1,14 @@
+/*
+Theme variables quick usage reference (where used):
+*/
 @import "tailwindcss";
+@theme {
+  --color-background: #cbd5e1; /* App main bg */
+  --color-card: #f8fafc; /* Blocks and cards bg (AlgorithmBlock, step blocks) */
+  --color-accent: #2f7d87; /* Accent buttons, main selected states (CustomButton, highlights) */
+  --color-accent-hover: #276b74; /* Accent button hover */
+  --color-danger: #c2414b; /* Danger buttons like Clear, Run */
+  --color-primary: #0f172a; /* Header text, important titles */
+  --color-secondary: #2f7d8769; /* Array borders, step borders, secondary info */
+  --color-header: #242424; /* App header background */
+}
