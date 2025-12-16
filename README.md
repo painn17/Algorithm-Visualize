@@ -29,7 +29,7 @@ A React-based web application that visualizes common algorithms with step-by-ste
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/painn17/Algorithm-Visualize)
 cd algorithm-visualizer
 ```
 
